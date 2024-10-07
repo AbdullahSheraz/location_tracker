@@ -17,19 +17,13 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return ios;
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -53,11 +47,30 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAmolnQPiCcRHeg83Euxxi6yzKGJN3D9a0',
-    appId: '1:1005779672819:android:a021d8f84201e38d306186',
-    messagingSenderId: '1005779672819',
-    projectId: 'reactfirebase-crud-4c15d',
-    databaseURL: 'https://reactfirebase-crud-4c15d-default-rtdb.firebaseio.com',
-    storageBucket: 'reactfirebase-crud-4c15d.appspot.com',
+    apiKey: 'AIzaSyAVNkPY8Y19NjVBKXYvdFsesRjVkuBQfWc',
+    appId: '1:565465882481:android:9e65deec3efff445dee0d0',
+    messagingSenderId: '565465882481',
+    projectId: 'location-tracker-dev1',
+    storageBucket: 'location-tracker-dev1.appspot.com',
   );
+
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyDpRkMbE5mg337aRWZap4la7kgkPk5ybCI',
+    appId: '1:565465882481:web:cdf9e74544de3bb6dee0d0',
+    messagingSenderId: '565465882481',
+    projectId: 'location-tracker-dev1',
+    authDomain: 'location-tracker-dev1.firebaseapp.com',
+    storageBucket: 'location-tracker-dev1.appspot.com',
+    measurementId: 'G-ERYMK2DJ3M',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyCPAcl9HBbRdojG572tooIoXM7qqVcvcbQ',
+    appId: '1:565465882481:ios:330055c92221974fdee0d0',
+    messagingSenderId: '565465882481',
+    projectId: 'location-tracker-dev1',
+    storageBucket: 'location-tracker-dev1.appspot.com',
+    iosBundleId: 'com.example.locationTracker',
+  );
+
 }

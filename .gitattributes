@@ -1,5 +1,5 @@
 # Prevents these files from being merged across branches
 firebase.json merge=ours
 google-services.json merge=ours
-firebase-options.dart merge=ours
+firebase_options.dart merge=ours
 constants.dart merge=ours

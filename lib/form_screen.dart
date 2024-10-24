@@ -24,7 +24,7 @@ class _FormScreenState extends State<FormScreen> {
   crashApp() {
     try {
       print("eirnier");
-      return Exception('iejrir,r');
+      throw Exception('iejrir,r');
     } catch (e, s) {
       FirebaseCrashlytics.instance.recordError(e, s, fatal: true);
     }
@@ -66,8 +66,7 @@ class _FormScreenState extends State<FormScreen> {
           child: Column(
             children: [
               TextButton(
-                  onPressed: () => throw Exception(),
-                  child: const Text("Crsh App")),
+                  onPressed: () => crashApp(), child: const Text("Crsh App")),
               Form(
                 key: _formKey,
                 child: Column(

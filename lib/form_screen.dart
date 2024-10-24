@@ -1,3 +1,4 @@
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -19,6 +20,15 @@ class _FormScreenState extends State<FormScreen> {
   // Firestore instance
   final CollectionReference users =
       FirebaseFirestore.instance.collection('users');
+
+  crashApp() {
+    try {
+      print("eirnier");
+      return Exception('iejrir,r');
+    } catch (e, s) {
+      FirebaseCrashlytics.instance.recordError(e, s, fatal: true);
+    }
+  }
 
   void _saveData() {
     if (_formKey.currentState!.validate()) {
@@ -55,6 +65,9 @@ class _FormScreenState extends State<FormScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              TextButton(
+                  onPressed: () => throw Exception(),
+                  child: const Text("Crsh App")),
               Form(
                 key: _formKey,
                 child: Column(

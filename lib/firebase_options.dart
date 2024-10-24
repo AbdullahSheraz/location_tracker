@@ -58,7 +58,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyB5hWQq_Je0DkjkhP4LrLkB4eUf_tASZuw',
-    appId: '1:152288671951:android:0b373a7b56a5034c9ddfba',
+    appId: '1:152288671951:android:228c70287c6af3969ddfba',
     messagingSenderId: '152288671951',
     projectId: 'location-tracker-prod',
     storageBucket: 'location-tracker-prod.appspot.com',
@@ -72,4 +72,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'location-tracker-prod.appspot.com',
     iosBundleId: 'com.example.locationTracker',
   );
+
 }

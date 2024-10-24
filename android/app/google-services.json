@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:152288671951:android:0b373a7b56a5034c9ddfba",
+        "mobilesdk_app_id": "1:152288671951:android:228c70287c6af3969ddfba",
         "android_client_info": {
-          "package_name": "com.ltracker.app"
+          "package_name": "com.tracker.app.prod"
         }
       },
       "oauth_client": [],

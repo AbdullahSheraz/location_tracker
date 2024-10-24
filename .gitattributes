@@ -4,3 +4,4 @@ google-services.json merge=ours
 firebase_options.dart merge=ours
 constants.dart merge=ours
 android/app/build.gradle merge=ours
+MainActivity.kt merge=ours
